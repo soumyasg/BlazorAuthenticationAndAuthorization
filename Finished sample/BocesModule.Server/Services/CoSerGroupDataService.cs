@@ -25,10 +25,12 @@ namespace BocesModule.Server.Services
         public async Task<IEnumerable<CoSerGroup>> GetAllCoSerGroups()
         {
             var accessToken = await _httpContextAccessor.HttpContext.GetTokenAsync("access_token");
+
             if (accessToken != null)
             {
                 _httpClient.DefaultRequestHeaders.Add("Authorization", "Bearer " + accessToken);
             }
+
             return await JsonSerializer.DeserializeAsync<IEnumerable<CoSerGroup>>
                 (await _httpClient.GetStreamAsync($"api/cosergroups"), new JsonSerializerOptions()
                 { PropertyNameCaseInsensitive = true });

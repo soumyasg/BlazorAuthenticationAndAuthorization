@@ -44,14 +44,13 @@ namespace BocesModule.Server
                     options.Authority = "https://localhost:44333";
                     options.ClientId = "bocesmodule";
                     options.ClientSecret = "108B7B4F-BEFC-4DD2-82E1-7F025F0F75D0";
-                    options.ResponseType = "code id_token";
+                    options.ResponseType = "code id_token"; // Using Hybrid flow
                     options.Scope.Add("openid");
                     options.Scope.Add("profile");
                     options.Scope.Add("email");
                     options.Scope.Add("bocesmoduleapi");
                     options.Scope.Add("country");
                     options.ClaimActions.MapUniqueJsonKey("country", "country");
-                    //options.CallbackPath = ...
                     options.SaveTokens = true;
                     options.GetClaimsFromUserInfoEndpoint = true;
 
