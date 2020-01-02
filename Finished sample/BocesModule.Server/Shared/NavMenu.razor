@@ -18,18 +18,18 @@
                          href="/" Match="NavLinkMatch.All">
                     <span class="oi oi-home" aria-hidden="true"></span> Home
                 </NavLink>
-                </Authorized>
+            </Authorized>
         </AuthorizeView>
-                <AuthorizeView Policy="@BocesModule.Shared.Policies.CanManageEmployees">
-                    <NavLink class="list-group-item list-group-item-action bg-light" href="/employeeoverview">
-                        <span class="oi oi-list-rich" aria-hidden="true"></span> Employees
-                    </NavLink>
-                </AuthorizeView>
+        <AuthorizeView Policy="@BocesModule.Shared.Policies.CanManageCoSerGroups">
+                <NavLink class="list-group-item list-group-item-action bg-light" href="/cosergroups">
+                        <span class="oi oi-list-rich" aria-hidden="true"></span> CoSer Groups
+                </NavLink>
+        </AuthorizeView>
         <AuthorizeView>
             <Authorized>
                 <NavLink class="list-group-item list-group-item-action bg-light"
                          href="/employeeedit">
-                    <span class="oi oi-list-rich" aria-hidden="true"></span> Add new employee
+                    <span class="oi oi-list-rich" aria-hidden="true"></span> Add new CoSer Group
                 </NavLink>
                 <NavLink class="list-group-item list-group-item-action bg-light"
                          href="LogoutIDP">

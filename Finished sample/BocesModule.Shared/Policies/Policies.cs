@@ -7,13 +7,13 @@ namespace BocesModule.Shared
 {
     public static class Policies
     {
-        public const string CanManageEmployees = "CanManageEmployees";
+        public const string CanManageCoSerGroups = "CanManageCoSerGroups";
 
-        public static AuthorizationPolicy CanManageEmployeesPolicy()
+        public static AuthorizationPolicy CanManageCoSerGroupsPolicy()
         {
             return new AuthorizationPolicyBuilder()
                 .RequireAuthenticatedUser()
-                .RequireClaim("country", "BE")
+                .RequireClaim("country", "US")
                 .Build();
         }
     }

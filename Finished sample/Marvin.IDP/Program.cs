@@ -79,7 +79,7 @@ namespace Wincap.IDP
                                 new Claim(JwtClaimTypes.GivenName, "Rich"),
                                 new Claim(JwtClaimTypes.FamilyName, "Gonyea"),
                                 new Claim(JwtClaimTypes.Email, "rich@email.com"),
-                                new Claim("country", "BE")
+                                new Claim("country", "US")
                             }).Result;
 
                             if (!result.Succeeded)
@@ -108,7 +108,7 @@ namespace Wincap.IDP
                                 new Claim(JwtClaimTypes.GivenName, "Soumya"),
                                 new Claim(JwtClaimTypes.FamilyName, "Sengupta"),
                                 new Claim(JwtClaimTypes.Email, "soumya@email.com"),
-                                new Claim("country", "US")
+                                new Claim("country", "IN")
                             }).Result;
 
                             if (!result.Succeeded)
@@ -137,7 +137,7 @@ namespace Wincap.IDP
                                 new Claim(JwtClaimTypes.GivenName, "Tony"),
                                 new Claim(JwtClaimTypes.FamilyName, "Carganilla"),
                                 new Claim(JwtClaimTypes.Email, "tony@email.com"),
-                                new Claim("country", "NL")
+                                new Claim("country", "PH")
                             }).Result;
 
                             if (!result.Succeeded)

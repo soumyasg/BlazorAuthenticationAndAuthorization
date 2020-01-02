@@ -60,8 +60,8 @@ namespace BocesModule.Server
             services.AddAuthorization(authorizationOptions =>
             {
                 authorizationOptions.AddPolicy(
-                    BocesModule.Shared.Policies.CanManageEmployees,
-                    BocesModule.Shared.Policies.CanManageEmployeesPolicy());
+                    BocesModule.Shared.Policies.CanManageCoSerGroups,
+                    BocesModule.Shared.Policies.CanManageCoSerGroupsPolicy());
             });
 
 
@@ -74,6 +74,10 @@ namespace BocesModule.Server
                 client.BaseAddress = new Uri("https://localhost:44340/");
             });
             services.AddHttpClient<IJobCategoryDataService, JobCategoryDataService>(client =>
+            {
+                client.BaseAddress = new Uri("https://localhost:44340/");
+            });
+            services.AddHttpClient<ICoSerGroupDataService, CoSerGroupDataService>(client =>
             {
                 client.BaseAddress = new Uri("https://localhost:44340/");
             });

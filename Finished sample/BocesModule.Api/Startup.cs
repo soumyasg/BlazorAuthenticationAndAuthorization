@@ -26,8 +26,8 @@ namespace BocesModule.Api
             services.AddAuthorization(authorizationOptions =>
             {
                 authorizationOptions.AddPolicy(
-                    BocesModule.Shared.Policies.CanManageEmployees,
-                    BocesModule.Shared.Policies.CanManageEmployeesPolicy());
+                    BocesModule.Shared.Policies.CanManageCoSerGroups,
+                    BocesModule.Shared.Policies.CanManageCoSerGroupsPolicy());
             });
 
             //services.AddDbContext<AppDbContext>(options => options.UseInMemoryDatabase(databaseName: "BocesModule"));

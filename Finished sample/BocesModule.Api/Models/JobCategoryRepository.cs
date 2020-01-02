@@ -17,12 +17,14 @@ namespace BocesModule.Api.Models
 
         public IEnumerable<JobCategory> GetAllJobCategories()
         {
-            return _appDbContext.JobCategories;
+            // return _appDbContext.JobCategories;
+            return new List<JobCategory>();
         }
 
         public JobCategory GetJobCategoryById(int jobCategoryId)
         {
-            return _appDbContext.JobCategories.FirstOrDefault(c => c.JobCategoryId == jobCategoryId);
+            // return _appDbContext.JobCategories.FirstOrDefault(c => c.JobCategoryId == jobCategoryId);
+            return new JobCategory();
         }
     }
 }

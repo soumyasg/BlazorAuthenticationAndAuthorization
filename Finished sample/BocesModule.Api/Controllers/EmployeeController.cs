@@ -17,7 +17,7 @@ namespace BocesModule.Api.Controllers
         }
 
         [HttpGet]
-        [Authorize(Policy = BocesModule.Shared.Policies.CanManageEmployees)]
+        [Authorize(Policy = BocesModule.Shared.Policies.CanManageCoSerGroups)]
         public IActionResult GetAllEmployees()
         {
             return Ok(_employeeRepository.GetAllEmployees());

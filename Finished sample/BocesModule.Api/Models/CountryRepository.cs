@@ -15,12 +15,14 @@ namespace BocesModule.Api.Models
 
         public IEnumerable<Country> GetAllCountries()
         {
-            return _appDbContext.Countries;
+            // return _appDbContext.Countries;
+            return new List<Country>();
         }
 
         public Country GetCountryById(int countryId)
         {
-            return _appDbContext.Countries.FirstOrDefault(c => c.CountryId == countryId);
+            // return _appDbContext.Countries.FirstOrDefault(c => c.CountryId == countryId);
+            return new Country();
         }
     }
 }

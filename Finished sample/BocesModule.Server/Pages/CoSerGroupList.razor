@@ -1,0 +1,45 @@
+﻿@page "/cosergroups"
+@inherits CoSerGroupListBase
+@*@attribute [Authorize(Policy = BocesModule.Shared.Policies.CanManageEmployees)]*@
+
+<h1 class="page-title">All employees</h1>
+
+@if (CoSerGroups == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                
+                <th>CoSerGroup ID</th>
+                <th>Code</th>
+                <th>Name</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var coSerGroup in CoSerGroups)
+            {
+                <tr>
+                    
+                    <td>@coSerGroup.CoSerGroupId</td>
+                    <td>@coSerGroup.CoSerGroupCode</td>
+                    <td>@coSerGroup.CoSerGroupName</td>
+                    <td>
+                        <a href="@($"cosergroupdetail/{coSerGroup.CoSerGroupId}")" class="btn btn-primary table-btn">
+                            <i class="fas fa-info-circle"></i>
+                        </a>
+                        <a href="@($"cosergroupedit/{coSerGroup.CoSerGroupId}")" class="btn btn-primary table-btn">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+<button @onclick="@QuickAddCoSerGroup" class="btn btn-dark table-btn quick-add-btn">&nbsp;&nbsp;+&nbsp;&nbsp;</button>
