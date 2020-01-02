@@ -50,7 +50,7 @@ namespace BethanysPieShopHRM.Api
 
             services.AddControllers(configure =>
             {
-                configure.Filters.Add(new AuthorizeFilter(requireAuthenticatedUserPolicy));
+                // configure.Filters.Add(new AuthorizeFilter(requireAuthenticatedUserPolicy));
             });
             //.AddJsonOptions(options => options.JsonSerializerOptions.ca);
 

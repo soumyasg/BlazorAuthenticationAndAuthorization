@@ -59,26 +59,26 @@ namespace Marvin.IDP
                         var userManager = scope.ServiceProvider
                             .GetRequiredService<UserManager<ApplicationUser>>();
 
-                        var jack = userManager.FindByNameAsync("Jack").Result;
-                        if (jack == null)
+                        var rich = userManager.FindByNameAsync("Rich").Result;
+                        if (rich == null)
                         {
-                            jack = new ApplicationUser
+                            rich = new ApplicationUser
                             {
-                                UserName = "Jack",
+                                UserName = "Rich",
                                 EmailConfirmed = true
                             };
 
-                            var result = userManager.CreateAsync(jack, "P@ssword1").Result;
+                            var result = userManager.CreateAsync(rich, "P@ssword1").Result;
                             if (!result.Succeeded)
                             {
                                 throw new Exception(result.Errors.First().Description);
                             }
 
-                            result = userManager.AddClaimsAsync(jack, new Claim[]{
-                                new Claim(JwtClaimTypes.Name, "Jack Torrance"),
-                                new Claim(JwtClaimTypes.GivenName, "Jack"),
-                                new Claim(JwtClaimTypes.FamilyName, "Torrance"),
-                                new Claim(JwtClaimTypes.Email, "jack.torrance@email.com"),
+                            result = userManager.AddClaimsAsync(rich, new Claim[]{
+                                new Claim(JwtClaimTypes.Name, "Rich Gonyea"),
+                                new Claim(JwtClaimTypes.GivenName, "Rich"),
+                                new Claim(JwtClaimTypes.FamilyName, "Gonyea"),
+                                new Claim(JwtClaimTypes.Email, "rich@email.com"),
                                 new Claim("country", "BE")
                             }).Result;
 
@@ -117,26 +117,26 @@ namespace Marvin.IDP
                             }
                         }
 
-                        var wendy = userManager.FindByNameAsync("Wendy").Result;
-                        if (wendy == null)
+                        var tony = userManager.FindByNameAsync("Tony").Result;
+                        if (tony == null)
                         {
-                            wendy = new ApplicationUser
+                            tony = new ApplicationUser
                             {
-                                UserName = "Wendy",
+                                UserName = "Tony",
                                 EmailConfirmed = true
                             };
 
-                            var result = userManager.CreateAsync(wendy, "P@ssword1").Result;
+                            var result = userManager.CreateAsync(tony, "P@ssword1").Result;
                             if (!result.Succeeded)
                             {
                                 throw new Exception(result.Errors.First().Description);
                             }
 
-                            result = userManager.AddClaimsAsync(wendy, new Claim[]{
-                                new Claim(JwtClaimTypes.Name, "Wendy Torrance"),
-                                new Claim(JwtClaimTypes.GivenName, "Wendy"),
-                                new Claim(JwtClaimTypes.FamilyName, "Torrance"),
-                                new Claim(JwtClaimTypes.Email, "wendy.torrance@email.com"),
+                            result = userManager.AddClaimsAsync(tony, new Claim[]{
+                                new Claim(JwtClaimTypes.Name, "Tony Carganilla"),
+                                new Claim(JwtClaimTypes.GivenName, "Tony"),
+                                new Claim(JwtClaimTypes.FamilyName, "Carganilla"),
+                                new Claim(JwtClaimTypes.Email, "tony@email.com"),
                                 new Claim("country", "NL")
                             }).Result;
 
