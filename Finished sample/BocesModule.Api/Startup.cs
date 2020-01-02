@@ -58,7 +58,7 @@ namespace BocesModule.Api
                 .AddIdentityServerAuthentication(options =>
                 {
                     options.Authority = "https://localhost:44333/";
-                    options.ApiName = "bethanyspieshophrapi";
+                    options.ApiName = "bocesmoduleapi";
                 });
 
         }

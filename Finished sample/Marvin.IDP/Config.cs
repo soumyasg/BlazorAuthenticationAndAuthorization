@@ -23,8 +23,8 @@ namespace Wincap.IDP
         public static IEnumerable<ApiResource> Apis =>
             new ApiResource[]
             {
-                new ApiResource("bethanyspieshophrapi", 
-                    "Bethany's Pie Shop HR API", 
+                new ApiResource("bocesmoduleapi", 
+                    "Boces Module API", 
                     new [] { "country" })
             };
 
@@ -34,15 +34,15 @@ namespace Wincap.IDP
             { 
                 new Client
                 {
-                    ClientId = "bethanyspieshophr",
-                    ClientName = "Bethany's Pie Shop HR",
+                    ClientId = "bocesmodule",
+                    ClientName = "Boces Module Maintenance",
                     AllowedGrantTypes = GrantTypes.Hybrid, 
                     ClientSecrets = { new Secret("108B7B4F-BEFC-4DD2-82E1-7F025F0F75D0".Sha256()) },
                     RedirectUris = { "https://localhost:44329/signin-oidc" }, 
                     PostLogoutRedirectUris = { "https://localhost:44329/signout-callback-oidc" },
                     AllowOfflineAccess = true,
                     RequireConsent = false,
-                    AllowedScopes = { "openid", "profile", "email", "bethanyspieshophrapi", "country" } 
+                    AllowedScopes = { "openid", "profile", "email", "bocesmoduleapi", "country" } 
                 }                 
             };
     }
