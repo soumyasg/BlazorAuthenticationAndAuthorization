@@ -117,6 +117,35 @@ namespace Wincap.IDP
                             }
                         }
 
+                        var zach = userManager.FindByNameAsync("Zach").Result;
+                        if (zach == null)
+                        {
+                            zach = new ApplicationUser
+                            {
+                                UserName = "Zach",
+                                EmailConfirmed = true
+                            };
+
+                            var result = userManager.CreateAsync(zach, "P@ssword1").Result;
+                            if (!result.Succeeded)
+                            {
+                                throw new Exception(result.Errors.First().Description);
+                            }
+
+                            result = userManager.AddClaimsAsync(zach, new Claim[]{
+                                new Claim(JwtClaimTypes.Name, "Zach Hurst"),
+                                new Claim(JwtClaimTypes.GivenName, "Zach"),
+                                new Claim(JwtClaimTypes.FamilyName, "Hurst"),
+                                new Claim(JwtClaimTypes.Email, "zach@email.com"),
+                                new Claim("country", "US")
+                            }).Result;
+
+                            if (!result.Succeeded)
+                            {
+                                throw new Exception(result.Errors.First().Description);
+                            }
+                        }
+
                         var tony = userManager.FindByNameAsync("Tony").Result;
                         if (tony == null)
                         {
