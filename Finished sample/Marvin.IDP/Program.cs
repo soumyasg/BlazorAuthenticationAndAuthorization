@@ -88,6 +88,35 @@ namespace Marvin.IDP
                             }
                         }
 
+                        var soumya = userManager.FindByNameAsync("Soumya").Result;
+                        if (soumya == null)
+                        {
+                            soumya = new ApplicationUser
+                            {
+                                UserName = "Soumya",
+                                EmailConfirmed = true
+                            };
+
+                            var result = userManager.CreateAsync(soumya, "P@ssword1").Result;
+                            if (!result.Succeeded)
+                            {
+                                throw new Exception(result.Errors.First().Description);
+                            }
+
+                            result = userManager.AddClaimsAsync(soumya, new Claim[]{
+                                new Claim(JwtClaimTypes.Name, "Soumya Sengupta"),
+                                new Claim(JwtClaimTypes.GivenName, "Soumya"),
+                                new Claim(JwtClaimTypes.FamilyName, "Sengupta"),
+                                new Claim(JwtClaimTypes.Email, "soumya@email.com"),
+                                new Claim("country", "US")
+                            }).Result;
+
+                            if (!result.Succeeded)
+                            {
+                                throw new Exception(result.Errors.First().Description);
+                            }
+                        }
+
                         var wendy = userManager.FindByNameAsync("Wendy").Result;
                         if (wendy == null)
                         {
