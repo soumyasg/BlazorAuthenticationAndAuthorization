@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BethanysPieShopHRM.Shared",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BethanysPieShopHRM.ComponentsLibrary", "BethanysPieShopHRM.ComponentsLibrary\BethanysPieShopHRM.ComponentsLibrary.csproj", "{BD196906-CA10-437E-BBCC-A8BC2A954F13}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Marvin.IDP", "Marvin.IDP\Marvin.IDP.csproj", "{8E86CC50-06AD-4E89-90A2-8B3B3F76D685}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wincap.IDP", "Marvin.IDP\Wincap.IDP.csproj", "{8E86CC50-06AD-4E89-90A2-8B3B3F76D685}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Marvin.IDP.Areas.Identity.Data;
+using Wincap.IDP.Areas.Identity.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace Marvin.IDP.Contexts
+namespace Wincap.IDP.Contexts
 {
     public class UserDbContext : IdentityDbContext<ApplicationUser>
     {

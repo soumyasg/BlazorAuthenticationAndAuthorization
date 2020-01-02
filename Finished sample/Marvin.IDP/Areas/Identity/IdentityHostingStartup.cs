@@ -1,6 +1,6 @@
 ﻿using System;
-using Marvin.IDP.Areas.Identity.Data;
-using Marvin.IDP.Contexts;
+using Wincap.IDP.Areas.Identity.Data;
+using Wincap.IDP.Contexts;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-[assembly: HostingStartup(typeof(Marvin.IDP.Areas.Identity.IdentityHostingStartup))]
-namespace Marvin.IDP.Areas.Identity
+[assembly: HostingStartup(typeof(Wincap.IDP.Areas.Identity.IdentityHostingStartup))]
+namespace Wincap.IDP.Areas.Identity
 {
     public class IdentityHostingStartup : IHostingStartup
     {

@@ -3,8 +3,8 @@
 
 
 using IdentityModel;
-using Marvin.IDP.Areas.Identity.Data;
-using Marvin.IDP.Contexts;
+using Wincap.IDP.Areas.Identity.Data;
+using Wincap.IDP.Contexts;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -18,7 +18,7 @@ using System;
 using System.Linq;
 using System.Security.Claims;
 
-namespace Marvin.IDP
+namespace Wincap.IDP
 {
     public class Program
     {

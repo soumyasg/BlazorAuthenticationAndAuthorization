@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Marvin.IDP.Migrations
+namespace Wincap.IDP.Migrations
 {
     public partial class CreateIdentitySchema : Migration
     {

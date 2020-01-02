@@ -7,7 +7,7 @@ using IdentityServer4.Test;
 using System.Collections.Generic;
 using System.Security.Claims;
 
-namespace Marvin.IDP
+namespace Wincap.IDP
 {
     public class TestUsers
     {

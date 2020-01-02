@@ -4,14 +4,14 @@
 
 using IdentityServer4;
 using IdentityServer4.Quickstart.UI;
-using Marvin.IDP.Areas.Identity.Data;
+using Wincap.IDP.Areas.Identity.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace Marvin.IDP
+namespace Wincap.IDP
 {
     public class Startup
     {
